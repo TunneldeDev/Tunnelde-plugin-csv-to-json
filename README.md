@@ -1,2 +1,11 @@
-# Tunnelde-plugin-csv-to-json
-Independent Tunnelde plugin development and releases
+# CSV to JSON · CSV 转 JSON
+
+Preview delimited records as JSON arrays. All cells stay strings, including headers, leading zeros and duplicate names.
+
+Open **CSV to JSON**, enter a value (for example `name,size\narchive,001`), then choose **Convert records**. Requires Node.js 22 or later. No network, files, saved input or host permissions. Copying is always explicit.
+
+将分隔文本预览为 JSON 数组；保留表头、重复列名和前导零，所有单元格均为字符串。打开插件页面，输入内容后点击「转换记录」。需要 Node.js 22 或更高版本；不读取文件、不联网，也不保存输入。
+
+## Independent development
+
+`npm ci --ignore-scripts` → `npm run build` → `npm run verify` → `npm run package`. Push a matching `vX.Y.Z` tag to publish this plugin independently. The Hub distributes the release URL and SHA-256; it does not build this package.
